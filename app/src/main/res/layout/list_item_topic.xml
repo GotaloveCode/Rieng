@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.text.Html" />
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="viewModel"
+            type="com.miriga.rieng.ui.topics.TopicItemViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/p4"
+        android:onClick="@{clickListener}"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/p3"
+                app:imageFromUrl="@{viewModel.imageUrl}"
+                tools:foreground="@color/grey_10" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/p5"
+            android:paddingTop="@dimen/p8"
+            android:paddingRight="@dimen/p5"
+            android:singleLine="true"
+            android:text="@{viewModel.category}"
+            android:textColor="@color/grey_90"
+            tools:text="Reproduction Health" />
+
+        <TextView
+            android:id="@+id/level"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:paddingLeft="@dimen/p5"
+            android:paddingRight="@dimen/p5"
+            android:paddingBottom="@dimen/p8"
+            android:text="@{Html.fromHtml(viewModel.description)}"
+            tools:text="A brief about the category" />
+
+    </LinearLayout>
+</layout>

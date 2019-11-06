@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.miriga.rieng.ui.levels.LevelItemViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/p4"
+        android:onClick="@{clickListener}"
+        android:padding="@dimen/p16">
+        <TextView
+            android:id="@+id/choice"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/p16"
+            android:text="@string/level"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_90"
+            app:layout_constraintEnd_toStartOf="@+id/level"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/level" />
+        <TextView
+            android:id="@+id/level"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="@dimen/p50"
+            android:layout_height="@dimen/p50"
+            android:background="@drawable/purple_circle_background"
+            android:gravity="center"
+            android:padding="@dimen/p8"
+            android:text="@{viewModel.level}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/choice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/choice"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="30" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

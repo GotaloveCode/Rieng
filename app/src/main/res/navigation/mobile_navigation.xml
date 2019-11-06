@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.miriga.rieng.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_AboutFragment"
+            app:destination="@id/AboutFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_HelpCenterFragment"
+            app:destination="@id/HelpCenterFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_levelFragment"
+            app:destination="@id/levelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AboutFragment"
+        android:name="com.miriga.rieng.ui.about.AboutFragment"
+        android:label="@string/about_this_app"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/HelpCenterFragment"
+        android:name="com.miriga.rieng.ui.help.HelpCenterFragment"
+        android:label="@string/help_centres"
+        tools:layout="@layout/fragment_help_center" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.miriga.rieng.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"
+            app:popUpTo="@+id/HomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.miriga.rieng.ui.ask.QuestionFragment"
+        android:label="@string/ask_a_question" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.miriga.rieng.ui.settings.SettingsFragment"
+        android:label="@string/action_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.miriga.rieng.ui.topics.TopicsFragment"
+        android:label="@string/topics"
+        tools:layout="@layout/fragment_topics">
+        <action
+            android:id="@+id/action_topicsFragment_to_subTopicFragment"
+            app:destination="@id/subTopicFragment" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/subTopicFragment"
+        android:name="com.miriga.rieng.ui.subtopics.SubTopicFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_subtopic">
+        <action
+            android:id="@+id/action_subTopicFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.miriga.rieng.ui.article.ArticlesFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_articles">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleDetailFragment"
+            app:destination="@+id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.miriga.rieng.ui.articledetail.ArticleDetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_article_detail" >
+        <argument
+            android:name="article"
+            app:argType="com.miriga.rieng.data.gson.Article" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelFragment"
+        android:name="com.miriga.rieng.ui.levels.LevelFragment"
+        android:label="@string/quiz"
+        tools:layout="@layout/fragment_level">
+        <action
+            android:id="@+id/action_levelFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.miriga.rieng.ui.quiz.QuizFragment"
+        android:label="{level}"
+        tools:layout="@layout/fragment_quiz" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="level"
+            app:argType="string" />
+    </fragment>
+</navigation>

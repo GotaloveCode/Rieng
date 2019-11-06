@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Rieng</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="loading">Loading …</string>
+    <string name="age">Age</string>
+    <string name="welcome_to_the_asrh_app">Welcome to the ASRH App</string>
+    <string name="gender">Gender</string>
+    <string name="proceed">Proceed</string>
+    <string name="about_this_app">About this App</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="ask_a_question">Ask a question</string>
+    <string name="reproductive_health">Reproductive Health</string>
+    <string name="harmful_practices">Harmful Practices</string>
+    <string name="help_centres">Help Centres</string>
+    <string name="quiz">Quiz</string>
+    <string name="invalid_age">Invalid age</string>
+    <string name="ask_any_question_you_may_want_answered_we_will_keep_everything_confidential_you_can_leave_your_number_in_case_you_want_us_to_contact_you">Ask any question you may want answered we will keep everything confidential. You can leave your number in case you want us to contact you</string>
+    <string name="version">Version</string>
+    <string-array name="gender_array">
+        <item>Female</item>
+        <item>Male</item>
+        <item>Other</item>
+    </string-array>
+    <string name="edit">Edit</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_your_gender">Enter your gender</string>
+    <string name="topics">Topics</string>
+
+    <string name="no_articles_found">No articles found!</string>
+    <string name="no_questions_found">No questions found</string>
+    <string name="level">Level</string>
+    <string name="score">Score</string>
+
+    <string name="no_levels_found">No levels found</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="ask_a_question_and_leave_your_contact_for_feedback">Ask a question and leave your contact for feedback</string>
+    <string name="enter_your_age">Enter your age</string>
+
+
+</resources>
