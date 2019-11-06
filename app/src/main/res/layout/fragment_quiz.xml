@@ -29,14 +29,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pager">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ms_stepPrevButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:drawableStart="@drawable/ic_chevron_left"
-                android:drawableLeft="@drawable/ic_chevron_left"
+                app:drawableStartCompat="@drawable/ic_chevron_left"
+                app:drawableLeftCompat="@drawable/ic_chevron_left"
                 android:enabled="false"
                 android:text="@string/back"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -57,14 +57,14 @@
                 app:layout_constraintTop_toTopOf="@+id/ms_stepNextButton" />
 
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ms_stepNextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:drawableEnd="@drawable/ic_chevron_right"
-                android:drawableRight="@drawable/ic_chevron_right"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableRightCompat="@drawable/ic_chevron_right"
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
